@@ -86,15 +86,13 @@ namespace ConsoleApp1_scheduler
 
 
 
-    public class SimpleJob : IJob
+    public class SimpleJob : Quartz.IJob
     {
         public int everyXMin { get; set; }
         public int everyXSec { get; set; }
         public int everyXHour { get; set; }
 
-
-
-
+               
 
         void IJob.Execute(IJobExecutionContext context)
         {
